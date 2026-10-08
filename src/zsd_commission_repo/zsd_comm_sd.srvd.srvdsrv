@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination - Commision Report'
+define service ZSD_COMM_SD {
+  expose ZSD_COMM_PV as COMMI;
+}

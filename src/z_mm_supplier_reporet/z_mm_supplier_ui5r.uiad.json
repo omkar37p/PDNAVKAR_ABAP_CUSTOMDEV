@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Supplier Certification List",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Supplier Certification List"
+  },
+  "ui5AppDetails": {
+    "appId": "mmsupplier"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D2D02582051991FC1CD09089E8E0D8EFCD436652_TM",
+    "semanticObject": "supplier_certification_list",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D2D02582051991FC1CD09089E8E0D8EFCD436652_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Supplier Certification List"
+      }
+    }
+  ]
+}

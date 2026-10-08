@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "MM ETA REPORT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "MM ETA REPORT"
+  },
+  "ui5AppDetails": {
+    "appId": "mmetareport1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_14FC836AFBD6F941E72936877010D058FA29AC56_TM",
+    "semanticObject": "mmetareport",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_14FC836AFBD6F941E72936877010D058FA29AC56_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "MM ETA REPORT",
+        "subtitle": "Report"
+      }
+    }
+  ]
+}

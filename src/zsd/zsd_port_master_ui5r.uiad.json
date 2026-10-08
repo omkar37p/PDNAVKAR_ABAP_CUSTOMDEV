@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Port Master 2",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Port Master 2"
+  },
+  "ui5AppDetails": {
+    "appId": "portmaster.portmastertable"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9EE908468EE488A1CB09059BC4A5165696289A28_TM",
+    "semanticObject": "port_master_tb",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9EE908468EE488A1CB09059BC4A5165696289A28_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Port Master 2",
+        "subtitle": "Port Master for GSTR1 Report"
+      }
+    }
+  ]
+}

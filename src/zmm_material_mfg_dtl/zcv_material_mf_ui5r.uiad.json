@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Material Manufacturer",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Material Manufacturer"
+  },
+  "ui5AppDetails": {
+    "appId": "materialmanufacturer.mmmaterialmfg"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_53D9ED86E0ACF384939CAF825963481DF65D832E_TM",
+    "semanticObject": "material_mfg",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_53D9ED86E0ACF384939CAF825963481DF65D832E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Manufacturer",
+        "subtitle": "Details"
+      }
+    }
+  ]
+}

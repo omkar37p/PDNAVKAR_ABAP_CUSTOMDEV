@@ -1,0 +1,4 @@
+@EndUserText.label: 'PRODUCT DESCRIPTION  SERVICE DEF'
+define service Zproduct_des_svcdef {
+  expose ZPRODUCT_DES_CDS as Product_Description;
+}

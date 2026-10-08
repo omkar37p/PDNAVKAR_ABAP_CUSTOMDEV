@@ -1,0 +1,69 @@
+@Metadata.layer: #PARTNER
+
+@UI: {
+  headerInfo: { typeName: 'Reconciliation report',
+                typeNamePlural: 'Reconciliation report',
+                title: { type: #STANDARD, label: 'Reconciliation report', value: 'MaterialNo' } },
+  presentationVariant: [{ sortOrder: [{ by: 'MaterialNo', direction:  #DESC }] }] }
+annotate entity ZPP_RECONCILATION_PV
+    with 
+{
+ @UI.facet: [ { id:  'Reconciliation report',
+                     purpose:         #STANDARD,
+                     type:            #IDENTIFICATION_REFERENCE,
+                     label:           'Reconciliation report',
+                     position:        10 } ]
+  
+  @UI: {  lineItem:       [ { position: 10, label: 'GRN Number' } ],
+          identification: [ { position: 10, label: 'GRN Number' } ]}
+       //   selectionField: [ { position: 10}  ]}                  
+      GRNNo;
+  
+  @UI: {  lineItem:       [ { position: 20, label: 'Material Number' } ],
+          identification: [ { position: 20, label: 'Material Number' } ],
+          selectionField: [ { position: 20}  ]}                  
+      MaterialNo;  
+  @UI: {  lineItem:       [ { position: 30, label: 'FG-PRODUCT' } ],
+          identification: [ { position: 30, label: 'FG-PRODUCT' } ]}
+        //  selectionField: [ { position: 30}  ]}                  
+     FGPRODUCT; 
+   @UI: {  lineItem:       [ { position: 40, label: 'SAP-CODE' } ],
+          identification: [ { position: 40, label: 'SAP-CODE' } ]}
+                          
+     Materialnofororder; 
+   @UI: {  lineItem:       [ { position: 50, label: 'BATCH no.' } ],
+          identification: [ { position: 50, label: 'BATCH no.' } ]}
+      //    selectionField: [ { position: 50}  ]}                  
+    BatchNo;
+   @UI: {  lineItem:       [ { position: 60, label: 'PRODUCTION ORDER' } ],
+          identification: [ { position: 60, label: 'PRODUCTION ORDER' } ]}
+        //  selectionField: [ { position: 70}  ]}                  
+    ManufacturingOrderID;
+   @UI: {  lineItem:       [ { position: 70, label: 'ITEM NAME' } ],
+          identification: [ { position: 70, label: 'ITEM NAME' } ]}
+         // selectionField: [ { position: 70}  ]}                  
+    ItemName;
+   @UI: {  lineItem:       [ { position: 80, label: 'GRN BATCH ID/BATCH NO' } ],
+          identification: [ { position: 80, label: 'GRN BATCH ID/BATCH NO' } ],
+          selectionField: [ { position: 80}  ]}                  
+    GRNBatchID;
+   @UI: {  lineItem:       [ { position: 90, label: 'ISSUE QTY.' } ],
+          identification: [ { position: 90, label: 'ISSUE QTY.' } ]}
+       //   selectionField: [ { position: 90}  ]}                  
+    issueQuantity;
+  @UI: {  lineItem:       [ { position: 100, label: 'Plant' } ],
+          identification: [ { position: 100, label: 'Plant' } ],
+          selectionField: [ { position: 100}  ]}                  
+    plant1;
+    
+    @UI: {  lineItem:       [ { position: 110, label: 'GRN Date' } ],
+          identification: [ { position: 110, label: 'GRN Date' } ]}
+     //     selectionField: [ { position: 110}  ]} 
+    GRNDate;
+    
+    @UI: {  lineItem:       [ { position: 120, label: 'GRN Quantity' } ],
+          identification: [ { position: 120, label: 'GRN Quantity' } ]}
+     //     selectionField: [ { position: 120}  ]} 
+    GRNqty;
+      
+}

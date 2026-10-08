@@ -1,0 +1,4 @@
+@EndUserText.label: 'Batch Char Data'
+define service ZBATCHAR_API_SRV1 {
+  expose ZBATCHAR_API_RPV01 as MatBatch;
+}

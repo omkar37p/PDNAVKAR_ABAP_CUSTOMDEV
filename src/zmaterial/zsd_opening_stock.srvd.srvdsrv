@@ -1,0 +1,4 @@
+@EndUserText.label: 'Opening Stock Custom Entity Service Definition'
+define service ZSD_OPENING_STOCK {
+  expose ZI_OPENING_STOCK;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Sevice Defination for Gstr1 Report'
+define service ZSD_GSTR1_S11 {
+  expose ZSD_GSTR1_PV as Main;
+}

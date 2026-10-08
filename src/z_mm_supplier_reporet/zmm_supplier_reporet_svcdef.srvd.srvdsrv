@@ -1,0 +1,4 @@
+@EndUserText.label: 'ServiceDefinition SUPPLIER_REPORET'
+define service ZMM_SUPPLIER_REPORET_SVCDEF {
+  expose Z_MM_SUPPLIER_REPORET_PRV as SupplierReport;
+}

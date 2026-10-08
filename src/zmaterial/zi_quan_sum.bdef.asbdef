@@ -1,0 +1,15 @@
+managed implementation in class zbp_i_quan_sum unique;
+strict ( 2 );
+
+define behavior for ZI_QUAN_SUM //alias <alias_name>
+with unmanaged save
+//persistent table <???>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create;
+//  update;
+//  delete;
+  field ( readonly ) Matdoc, Matdocitem;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination - Commision Report'
+define service ZCOMMISION_SD {
+  expose ZCOMMISION_PV as commission;
+}

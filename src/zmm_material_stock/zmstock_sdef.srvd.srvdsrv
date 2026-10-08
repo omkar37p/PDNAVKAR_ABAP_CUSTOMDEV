@@ -1,0 +1,4 @@
+@EndUserText.label: 'Material Stock Service Defination'
+define service ZMStock_Sdef {
+  expose ZMStock_final;
+}

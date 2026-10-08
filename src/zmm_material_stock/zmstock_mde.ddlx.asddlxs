@@ -1,0 +1,212 @@
+@Metadata.layer: #PARTNER
+@UI.headerInfo: { typeName: 'Material Stock Report', typeNamePlural:'Material Stock Report' }
+annotate entity ZMStock_final with
+  parameters
+    @EndUserText.label: 'From Date'
+    from_date,
+    @EndUserText.label: 'To Date'
+    to_date
+{
+  @UI: { lineItem: [ { position: 10, importance: #HIGH } ] }
+  @EndUserText.label: 'Document Year'
+  Matdocyear;
+  @UI: { lineItem: [ { position: 20, importance: #HIGH } ] }
+  @EndUserText.label: 'Material document'
+  matdoc;
+  @UI: { lineItem: [ { position: 30, importance: #HIGH } ] }
+  @EndUserText.label: 'Material document Item'
+  matdocitem;
+  @UI: { lineItem: [ { position: 40, importance: #HIGH } ] }
+  @EndUserText.label: 'Document Date'
+  documentdate;
+  @UI: { lineItem: [ { position: 50, importance: #HIGH } ] } 
+  @EndUserText.label: 'Posting Date'
+  postingdate;
+  @UI: { lineItem: [ { position: 60, importance: #HIGH } ] }
+  @EndUserText.label: 'Company Code'
+  Companycode;
+  @UI: { lineItem: [ { position: 70, importance: #HIGH } ] ,
+         selectionField: [ { position: 10}  ] }
+  @EndUserText.label: 'Division'
+  Division;
+  @UI: { lineItem: [ { position: 80, label: 'Product Group', importance: #HIGH } ], 
+           selectionField: [ { position: 30}  ] }
+  @EndUserText.label: 'Product Group'
+  Productgroup;
+  @UI: { lineItem: [ { position: 90,  label: 'Distribution Channel', importance: #HIGH } ] ,
+  selectionField: [ { position: 20}  ] }
+  @EndUserText.label: 'Distribution Channel'
+  DistributionChannel;
+  @UI: { lineItem: [ { position: 100, importance: #HIGH } ] }
+  @EndUserText.label: 'Material No'
+  material;
+  @UI: { lineItem: [ { position: 110, importance: #HIGH } ] }
+  @EndUserText.label: 'Material Name'
+  Materialname;
+  @UI: { lineItem: [ { position: 120, importance: #HIGH } ] }
+  @EndUserText.label: 'Plant'
+  plant;
+  @UI: { lineItem: [ { position: 130, label: 'Storage Location', importance: #HIGH } ],
+         selectionField: [ { position: 40}  ] }
+  @EndUserText.label: 'Storage Location'
+  Storagelocation;
+  @UI: { lineItem: [ { position: 140, importance: #HIGH } ] }
+  @EndUserText.label: 'Batch'
+  Batch;
+  @UI: { lineItem: [ { position: 150, importance: #HIGH } ] }
+  @EndUserText.label: 'Movement Type'
+  Movementtype;
+  @UI: { lineItem: [ { position: 160, importance: #HIGH } ] }
+  @EndUserText.label: 'Stock Quantity'
+  stock;
+  @UI: { lineItem: [ { position: 170, importance: #HIGH } ] }
+  @EndUserText.label: 'O/s Stock Qty'
+  open_stock;
+  @UI: { lineItem: [ { position: 180, importance: #HIGH } ] }
+  @EndUserText.label: 'O/s Stock Rate'
+  os_StockRate;
+  @UI: { lineItem: [ { position: 190, importance: #HIGH } ] }
+  @EndUserText.label: 'O/s Stock value'
+  Os_Stockvalue;
+  @UI: { lineItem: [ { position: 200, importance: #HIGH } ] }
+  @EndUserText.label: 'Production Qty'
+  ProductionQty;
+  @UI: { lineItem: [ { position: 210, importance: #HIGH } ] }
+  @EndUserText.label: 'Production Rate'
+  ProductionRate;
+  @UI: { lineItem: [ { position: 220, importance: #HIGH } ] }
+  @EndUserText.label: 'Production Value'
+  ProductionValue;
+  @UI: { lineItem: [ { position: 230, importance: #HIGH } ] }
+  @EndUserText.label: 'Purchase Qty'
+  PurchaseQty; 
+  @UI: { lineItem: [ { position: 240, importance: #HIGH } ] }
+  @EndUserText.label: 'Purchase Rate'
+  PurchaseRate;
+  @UI: { lineItem: [ { position: 250, importance: #HIGH } ] }
+  @EndUserText.label: 'Purchase Value'
+  PurchaseValue;
+  @UI: { lineItem: [ { position: 260, importance: #HIGH } ] }
+  @EndUserText.label: 'TradingQty'
+  TradingQty;
+  @UI: { lineItem: [ { position: 270, importance: #HIGH } ] }
+  @EndUserText.label: 'Trading Rate'
+  TradingRate;
+  @UI: { lineItem: [ { position: 280, importance: #HIGH } ] }
+  @EndUserText.label: 'Trading Value'
+  TradingValue;
+  @UI: { lineItem: [ { position: 290, importance: #HIGH } ] }
+  @EndUserText.label: 'Location Trf Inw Qty'
+  Loc_Trf_InQty;
+  @UI: { lineItem: [ { position: 300, importance: #HIGH } ] }
+  @EndUserText.label: 'Location Trf Inw Rate'
+  Loc_Trf_InRate;
+  @UI: { lineItem: [ { position: 310, importance: #HIGH } ] }
+  @EndUserText.label: 'Location Trf Inw Value'
+  Loc_Trf_InValue;
+  @UI: { lineItem: [ { position: 320, importance: #HIGH } ] }
+  @EndUserText.label: 'Write Back Qty'
+  WriteBackQty;
+  @UI: { lineItem: [ { position: 330, importance: #HIGH } ] }
+  @EndUserText.label: 'Write Back Rate'
+  WriteBackRate;
+  @UI: { lineItem: [ { position: 340, importance: #HIGH } ] }
+  @EndUserText.label: 'Total Inward Qty'
+  Total_InwardQty;
+  @UI: { lineItem: [ { position: 350, importance: #HIGH } ] }
+  @EndUserText.label: 'Total Inward Rate'
+  Total_InwardRate;
+  @UI: { lineItem: [ { position: 360, importance: #HIGH } ] }
+  @EndUserText.label: 'Total Inward Value'
+  Total_InwardValue;
+  @UI: { lineItem: [ { position: 370, importance: #HIGH } ] }
+  @EndUserText.label: 'Domestic Sales Qty'
+  DomesticSalesQty;
+  @UI: { lineItem: [ { position: 380, importance: #HIGH } ] }
+  @EndUserText.label: 'Domestic Sales Rate'
+  DomesticSalesRate;
+  @UI: { lineItem: [ { position: 390, importance: #HIGH } ] }
+  @EndUserText.label: 'Domestic Sales Value'
+  DomesticSalesValue;
+  @UI: { lineItem: [ { position: 400, importance: #HIGH } ] }
+  @EndUserText.label: 'Deemed Export Qty'
+  DeemedExportQty;
+  @UI: { lineItem: [ { position: 410, importance: #HIGH } ] }
+  @EndUserText.label: 'Deemed Export Rate'
+  DeemedExportRate;
+  @UI: { lineItem: [ { position: 420, importance: #HIGH } ] }
+  @EndUserText.label: 'Deemed Export Value'
+  DeemedExportValue;
+  @UI: { lineItem: [ { position: 430, importance: #HIGH } ] }
+  @EndUserText.label: 'SEZ Sales Qty'
+  SEZSalesQty;
+  @UI: { lineItem: [ { position: 440, importance: #HIGH } ] }
+  @EndUserText.label: 'SEZ Sales Rate'
+  SEZSalesRate;
+  @UI: { lineItem: [ { position: 450, importance: #HIGH } ] }
+  @EndUserText.label: 'SEZ Sales Value'
+  SEZSalesValue;
+  @UI: { lineItem: [ { position: 460, importance: #HIGH } ] }
+  @EndUserText.label: 'Export Qty'
+  ExportQty;
+  @UI: { lineItem: [ { position: 470, importance: #HIGH } ] }
+  @EndUserText.label: 'Export Rate'
+  ExportRate;
+  @UI: { lineItem: [ { position: 480, importance: #HIGH } ] }
+  @EndUserText.label: 'Export Value'
+  ExportValue;
+  @UI: { lineItem: [ { position: 490, importance: #HIGH } ] }
+  @EndUserText.label: 'Net Sales Qty'
+  NetSalesQty;
+  @UI: { lineItem: [ { position: 500, importance: #HIGH } ] }
+  @EndUserText.label: 'Net Sales Rate'
+  NetSalesRate;
+  @UI: { lineItem: [ { position: 510, importance: #HIGH } ] }
+  @EndUserText.label: 'Net Sales Value'
+  NetSalesValue;
+  @UI: { lineItem: [ { position: 520, importance: #HIGH } ] }
+  @EndUserText.label: 'Job Work Qty'
+  JobWorkQty;
+  @UI: { lineItem: [ { position: 530, importance: #HIGH } ] }
+  @EndUserText.label: 'Job Work Rate'
+  JobWorkRate;
+  @UI: { lineItem: [ { position: 540, importance: #HIGH } ] }
+  @EndUserText.label: 'Job Work Value'
+  JobWorkValue;
+  @UI: { lineItem: [ { position: 550, importance: #HIGH } ] }
+  @EndUserText.label: 'Production Issue Qty'
+  ProductionIssueQty;
+  @UI: { lineItem: [ { position: 560, importance: #HIGH } ] }
+  @EndUserText.label: 'Production Issue Rate'
+  ProductionIssueRate;
+  @UI: { lineItem: [ { position: 570, importance: #HIGH } ] }
+  @EndUserText.label: 'Production Issue Value'
+  ProductionIssueValue;
+  @UI: { lineItem: [ { position: 580, importance: #HIGH } ] }
+  @EndUserText.label: 'Loc Trf OutQty'
+  Loc_Trf_OutQty;
+  @UI: { lineItem: [ { position: 590, importance: #HIGH } ] }
+  @EndUserText.label: 'Loc Trf OutRate'
+  Loc_Trf_OutRate;
+  @UI: { lineItem: [ { position: 600, importance: #HIGH } ] }
+  @EndUserText.label: 'Loc Trf OutValue'
+  Loc_Trf_OutValue;
+  @UI: { lineItem: [ { position: 610, importance: #HIGH } ] }
+  @EndUserText.label: 'Total_OutQty'
+  Total_OutQty;
+  @UI: { lineItem: [ { position: 620, importance: #HIGH } ] }
+  @EndUserText.label: 'Total_OutRate'
+  Total_OutRate;
+  @UI: { lineItem: [ { position: 630, importance: #HIGH } ] }
+  @EndUserText.label: 'Total_OutValue'
+  Total_OutValue;
+  @UI: { lineItem: [ { position: 640, importance: #HIGH } ] }
+  @EndUserText.label: 'C/s Stock Qty'
+  total_stock;
+  @UI: { lineItem: [ { position: 650, importance: #HIGH } ] }
+  @EndUserText.label: 'C/s Stock Rate'
+  Total_StockRate;
+  @UI: { lineItem: [ { position: 660, importance: #HIGH } ] }
+  @EndUserText.label: 'C/s Stock Value'
+  Total_StockValue;
+}

@@ -1,0 +1,328 @@
+@Metadata.layer: #PARTNER
+@UI:{
+headerInfo: { typeName: 'Aging Report',
+              typeNamePlural: 'Aging Report',
+              title : { type: #STANDARD, label: 'Aging Report', value: 'AccountingDocument'}},
+              presentationVariant: [{ sortOrder: [{ by: 'AccountingDocument', direction:  #DESC }] }]}
+annotate view ZFI_SUPPLIER_AGING_PV with
+{
+  @UI.facet: [{ id:      'AgingReport',
+                 purpose: #STANDARD,
+                 type:    #IDENTIFICATION_REFERENCE,
+                 label:   'AgingReport',
+                 position:10 },
+               { id:      'AccountingDocument',
+                 purpose: #STANDARD,
+                 type:    #LINEITEM_REFERENCE,
+                 label:   'AccountingDocument',
+                 position:10,
+                 targetElement:'AccountingDocument'} ]
+  @UI.lineItem: [{ position: 10, label: 'Voucher Number' }]
+  @UI.identification: [{ position: 10, label: 'Voucher Number' }]
+  AccountingDocument;
+
+  @UI: { lineItem: [{ position: 30, label: 'Company Code' }] ,
+  identification: [{ position: 30, label: 'Company Code' }]}
+  @UI.selectionField   : [{position: 30   }]
+  CompanyCode;
+
+  @UI: { lineItem: [{ position: 40, label: 'Fiscal Year' }] ,
+  identification: [{ position: 40, label: 'Fiscal Year' }]}
+  @UI.selectionField   : [{position: 40   }]
+  FiscalYear;
+
+  @UI: { lineItem: [{ position: 50, label: 'Plant' }] ,
+  identification: [{ position: 50, label: 'Plant' }]}
+  Plant;
+
+  @UI: { lineItem: [{ position: 60, label: 'Transaction Site' }] ,
+  identification: [{ position: 60, label: 'Transaction Site' }]}
+  TransactionSite;
+
+
+  @UI: { lineItem: [{ position: 70, label: 'Party Category' }] ,
+  identification: [{ position: 70, label: 'Party Category' }]}
+  PartyCategory;
+
+  @UI: { lineItem: [{ position: 80, label: 'Party Code' }] ,
+  identification: [{ position: 80, label: 'Party Code' }]}
+  @UI.selectionField   : [{position: 80   }]
+  PartyCode;
+
+  @UI: { lineItem: [{ position: 90, label: 'Party Description' }] ,
+  identification: [{ position: 90, label: 'Party Description' }]}
+  PartyDescription;
+
+  @UI: { lineItem: [{ position: 100, label: 'Party State' }] ,
+  identification: [{ position: 100, label: 'Party State' }]}
+  PartyState;
+
+  @UI: { lineItem: [{ position: 110, label: 'GSTIN No' }] ,
+  identification: [{ position: 110, label: 'GSTIN No' }]}
+  GSTINNo;
+
+  @UI: { lineItem: [{ position: 120, label: 'Party Credit Days' }] ,
+  identification: [{ position: 120, label: 'Party Credit Days' }]}
+  PartyCreditDays;
+
+  @UI: { lineItem: [{ position: 130, label: 'Payment Hold As Per Master' }] ,
+  identification: [{ position: 130, label: 'Payment Hold As Per Master' }]}
+  PaymentHoldasPerMaster;
+
+  @UI: { lineItem: [{ position: 140, label: 'Payment Hold Remarks' }] ,
+  identification: [{ position: 140, label: 'Payment Hold Remarks' }]}
+  PaymentHoldRemarks;
+
+  //@UI: { lineItem: [{ position: 150, label: 'Payment Term Days' }] ,
+  //identification: [{ position: 150, label: 'Payment Term Days' }]}
+  //DueDays;
+
+  @UI: { lineItem: [{ position: 160, label: 'Voucher Type' }] ,
+  identification: [{ position: 160, label: 'Voucher Type' }]}
+  AccountingDocumentType;
+
+  @UI: { lineItem: [{ position: 170, label: 'Cost Center Code' }] ,
+  identification: [{ position: 170, label: 'Cost Center Code' }]}
+  costCenter;
+
+  @UI: { lineItem: [{ position: 180, label: 'Cost Center Description' }] ,
+  identification: [{ position: 180, label: 'Cost Center Description' }]}
+  CostCenterDescription;
+
+  @UI: { lineItem: [{ position: 190, label: 'Voucher Date' }] ,
+  identification: [{ position: 190, label: 'Voucher Date' }]}
+  VoucherDate;
+
+  @UI: { lineItem: [{ position: 200, label: 'Supplier Invoice No' }] ,
+  identification: [{ position: 200, label: 'Supplier Invoice No' }]}
+  SupInvorCustomerPOsNo;
+
+  @UI: { lineItem: [{ position: 210, label: 'Supplier Inv Date' }] ,
+  identification: [{ position: 210, label: 'Supplier Inv Date' }]}
+  SupInvDateorCusPODt;
+
+  @UI: { lineItem: [{ position: 220, label: 'Supplier Reference Invoice No' }] ,
+  identification: [{ position: 220, label: 'Supplier Reference Invoice No' }]}
+  SRefDocID;
+
+  @UI: { lineItem: [{ position: 230, label: 'Invoice Due date' }] ,
+  identification: [{ position: 230, label: 'Invoice Due date' }]}
+  InvoiceDuedate;
+
+  @UI: { lineItem: [{ position: 240, label: 'Currency' }] ,
+  identification: [{ position: 240, label: 'Currency' }]}
+  curr;
+
+  //@UI: { lineItem: [{ position: 240, label: 'Exchange Rate' }] ,
+  //identification: [{ position: 240, label: 'Exchange Rate' }]}
+  //ExchangeRate;
+
+  @UI: { lineItem: [{ position: 250, label: 'Outstanding Amount in Foreign Currency' }] ,
+  identification: [{ position: 250, label: 'Outstanding Amount in Foreign Currency' }]}
+  OriAmtForeignCur;
+
+  @UI: { lineItem: [{ position: 260, label: 'Outstanding Amount in Domestic Currency' }] ,
+  identification: [{ position: 260, label: 'Outstanding Amount in Domestic Currency' }]}
+  OriAmtDomCur;
+
+  @UI: { lineItem: [{ position: 270, label: 'Outstanding Amount in CompanyCode Currency' }] ,
+  identification: [{ position: 270, label: 'Outstanding Amount in CompanyCode Currency' }]}
+  LCDomCur;
+
+
+  @UI: { lineItem: [{ position: 280, label: '0 - 30 days Amount in INR' }] ,
+  identification: [{ position: 280, label: '0 - 30 days Amount in INR' }]}
+  LCAmt30;
+
+  @UI: { lineItem: [{ position: 290, label: '0 - 30 days Amount in FC' }] ,
+  identification: [{ position: 290, label: '0 - 30 days Amount in FC' }]}
+  Fcamt30;
+
+  @UI: { lineItem: [{ position: 300, label: '31 - 60 days Amount in INR' }] ,
+  identification: [{ position: 300, label: '31 - 60 days Amount in INR' }]}
+  LCamt60;
+
+  @UI: { lineItem: [{ position: 310, label: '31 - 60 days Amount in FC' }] ,
+  identification: [{ position: 310, label: '31 - 60 days Amount in FC' }]}
+  FCamt60;
+
+  @UI: { lineItem: [{ position: 320, label: '61 - 90 days Amount in INR' }] ,
+  identification: [{ position: 320, label: '61 - 90 days Amount in INR' }]}
+  LCamt90;
+
+  @UI: { lineItem: [{ position: 330, label: '61 - 90 days Amount in FC' }] ,
+  identification: [{ position: 330, label: '61 - 90 days Amount in FC' }]}
+  FCamt90;
+
+  @UI: { lineItem: [{ position: 340, label: '91 - 120 days Amount in INR' }] ,
+  identification: [{ position: 340, label: '91 - 120 days Amount in INR' }]}
+  LCamt120;
+
+  @UI: { lineItem: [{ position: 350, label: '91 - 120 days Amount in FC' }] ,
+  identification: [{ position: 350, label: '91 - 120 days Amount in FC' }]}
+  FCamt120;
+
+  @UI: { lineItem: [{ position: 360, label: '121 - 150 days Amount in INR' }] ,
+  identification: [{ position: 360, label: '121 - 150 days Amount in INR' }]}
+  LCamt150;
+
+  @UI: { lineItem: [{ position: 370, label: '121 - 150 days Amount in FC' }] ,
+  identification: [{ position: 370, label: '121 - 150 days Amount in FC' }]}
+  FCamt150;
+
+  @UI: { lineItem: [{ position: 380, label: '151 - 180 days Amount in INR' }] ,
+  identification: [{ position: 380, label: '151 - 180 days Amount in INR' }]}
+  LCamt180;
+
+  @UI: { lineItem: [{ position: 390, label: '151 - 180 days Amount in FC' }] ,
+  identification: [{ position: 390, label: '151 - 180 days Amount in FC' }]}
+  FCamt180;
+
+  @UI: { lineItem: [{ position: 480, label: 'Due Amount in Foreign Currency' }] ,
+  identification: [{ position: 480, label: 'Due Amount in Foreign Currency' }]}
+  DueamtFC;
+
+  @UI: { lineItem: [{ position: 490, label: 'Due Amount in Domestic Currency' }] ,
+  identification: [{ position: 490, label: 'Due Amount in Domestic Currency' }]}
+  DueamtlC;
+
+  @UI: { lineItem: [{ position: 500, label: 'Due Amount in Company code currency' }] ,
+  identification: [{ position: 500, label: 'Due Amount in Company code currency' }]}
+  DueInCCOdeCurr;
+
+  @UI: { lineItem: [{ position: 510, label: 'Header Narration' }] ,
+  identification: [{ position: 510, label: 'Header Narration' }]}
+  HeaderNarration;
+
+  @UI: { lineItem: [{ position: 520, label: 'Voucher Created By' }] ,
+  identification: [{ position: 520, label: 'Voucher Created By' }]}
+  VoucherCreatedBy;
+
+  @UI: { lineItem: [{ position: 530, label: 'Payment Terms' }] ,
+  identification: [{ position: 530, label: 'Payment Terms' }]}
+  PaymentTerms;
+
+  @UI: { lineItem: [{ position: 540, label: 'Profit Center' }] ,
+  identification: [{ position: 540, label: 'Profit Center' }]}
+  ProfitCenter;
+
+  @UI: { lineItem: [{ position: 550, label: 'Special GL Code' }] ,
+  identification: [{ position: 550, label: 'Special GL Code' }]}
+  SpecialGLCode;
+
+  @UI: { lineItem: [{ position: 560, label: 'Payment Hold for line item indicato' }] ,
+  identification: [{ position: 560, label: 'Payment Hold for line item indicato' }]}
+  paymentHold;
+
+  @UI: { lineItem: [{ position: 570, label: 'Purchase Order No' }] ,
+  identification: [{ position: 570, label: 'Purchase Order No' }]}
+  purchaseOrder;
+
+  @UI: { lineItem: [{ position: 580, label: 'PO Account Assignment category Desc' }] ,
+  identification: [{ position: 580, label: 'PO Account Assignment category Desc' }]}
+  AccCatoDec;
+
+  @UI: { lineItem: [{ position: 590, label: 'MSME vendor identification' }] ,
+  identification: [{ position: 590, label: 'MSME vendor identification' }]}
+  MSMEvidenti;
+
+  @UI: { lineItem: [{ position: 600, label: 'Assignment Number' }] ,
+  identification: [{ position: 600, label: 'Assignment Number' }]}
+  AssignmentNumber;
+
+  @UI: { lineItem: [{ position: 610, label: 'Charts Of Accounts' }] ,
+  identification: [{ position: 610, label: 'Charts Of Accounts' }]}
+  ChartsOfAccounts;
+
+  @UI: { lineItem: [{ position: 620, label: 'Fin Account Type' }] ,
+  identification: [{ position: 620, label: 'Fin Account Type' }]}
+  FinAccountType;
+
+  //@UI: { lineItem: [{ position: 630, label: 'Exchange Rate' }] ,
+  //identification: [{ position: 630, label: 'Exchange Rate' }]}
+  //ExchangeRate;
+
+  @UI: { lineItem: [{ position: 630, label: 'Clearing Dates' }] ,
+  identification: [{ position: 630, label: 'Clearing Dates' }]}
+  ClearingDates;
+
+  @UI: { lineItem: [{ position: 630, label: 'TransactionCurrency' }] ,
+  identification: [{ position: 630, label: 'TransactionCurrency' }]}
+  TransactionCurrency;
+
+  @UI: { lineItem: [{ position: 640, label: 'GR No' }] ,
+  identification: [{ position: 640, label: 'GR No' }]}
+  GRNo;
+
+  @UI: { lineItem: [{ position: 650, label: 'Recon A/C Name' }] ,
+  identification: [{ position: 650, label: 'Recon A/C Name' }]}
+  ReconACName;
+
+  @UI: { lineItem: [{ position: 660, label: 'Clearing Journal Entry Number' }] ,
+  identification: [{ position: 660, label: 'Clearing Journal Entry Number' }]}
+  ClearingJournalEntryNumber;
+
+  @UI: { lineItem: [{ position: 670, label: 'GL A/C Code' }] ,
+  identification: [{ position: 670, label: 'GL A/C Code' }]}
+  GLACCODE;
+
+  @UI: { lineItem: [{ position: 680, label: 'GL A/C Name' }] ,
+  identification: [{ position: 680, label: 'GL A/C Name' }]}
+  GLACNAME;
+
+  @UI: { lineItem: [{ position: 680, label: 'FI No' }] ,
+  identification: [{ position: 680, label: 'FI No' }]}
+  ACCOUNTINGDOCJE;
+
+  @UI: { lineItem: [{ position: 690, label: 'Net Due Interval' }] ,
+  identification: [{ position: 690, label: 'Net Due Interval' }]}
+  NetDueInterval;
+
+  @UI: { lineItem: [{ position: 710, label: 'Withhold Tax Base' }] ,
+  identification: [{ position: 710, label: 'Withhold Tax Base' }]}
+  WHTBA;
+
+  @UI: { lineItem: [{ position: 720, label: 'Withholding Tax Exemption Amt' }] ,
+  identification: [{ position: 720, label: 'Withholding Tax ExemptionAmt' }]}
+  Withholdingtaxexempt;
+
+  @UI: { lineItem: [{ position: 730, label: 'Ref Doc Type ' }] ,
+  identification: [{ position: 730, label: 'Ref Doc Type ' }]}
+  RefDocType;
+
+  @UI: { lineItem: [{ position: 740, label: 'Account Group ' }] ,
+  identification: [{ position: 740, label: 'Account Group ' }]}
+  AccountGroup;
+
+  @UI: { lineItem: [{ position: 750, label: 'Accounting Clerk ' }] ,
+  identification: [{ position: 750, label: 'Accounting Clerk ' }]}
+  AccountingClerk;
+
+  @UI: { lineItem: [{ position: 760, label: 'Recon A/C Code ' }] ,
+  identification: [{ position: 760, label: 'Recon A/C Code ' }]}
+  ReconACCode;
+
+  @UI: { lineItem: [{ position: 762, label: 'Sales Returned Item ' }] ,
+  identification: [{ position: 762, label: 'Sales Returned Item ' }]}
+  SalesReturnedItem;
+
+  @UI: { lineItem: [{ position: 763, label: 'Item Code ' }] ,
+  identification: [{ position: 763, label: 'Item Code ' }]}
+  ItemCode;
+
+  @UI: { lineItem: [{ position: 770, label: 'Section Code ' }] ,
+  identification: [{ position: 770, label: 'Section Code ' }]}
+  SectionCode;
+
+  @UI: { lineItem: [{ position: 780, label: 'Place Of Supply ' }] ,
+  identification: [{ position: 780, label: 'Place Of Supply ' }]}
+  PlaceOfSupply;
+
+  @UI: { lineItem: [{ position: 790, label: 'Assignment Number ' }] ,
+  identification: [{ position: 790, label: 'Assignment Number ' }]}
+  AsgnmntNumber;
+
+  @UI: { lineItem: [{ position: 792, label: 'Exchange Rate Type ' }] ,
+  identification: [{ position: 792, label: 'Exchange Rate Type ' }]}
+  ExchangeRateType;
+}

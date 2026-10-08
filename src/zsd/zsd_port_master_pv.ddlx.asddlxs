@@ -1,0 +1,33 @@
+@Metadata.layer: #PARTNER
+annotate view ZSD_PORT_MASTER_PV with
+{
+     
+  @UI.facet: [{ id: 'ID01', type: #COLLECTION, label: 'Port Master', position: 10 },
+              { id: 'Idc01', type: #IDENTIFICATION_REFERENCE, parentId: 'ID01' } ]
+
+  @UI.lineItem: [{ position: 1, label: 'Port Name' }]
+  @UI.identification:  [{ position: 1, label: 'Port Name' }]
+  @EndUserText.label: 'Port Name'
+  portname;
+
+  @UI.lineItem: [{ position: 2, label:  'Country Name' }]
+  @UI.identification:  [{ position: 2, label:  'Country Name' }]
+  @EndUserText.label: 'Country Name'
+  countryname;
+  
+  @UI.lineItem: [{ position: 3, label:  'Port No' }]
+  @UI.identification:  [{ position: 3, label:  'Port No' }]
+  @EndUserText.label: 'Port No'
+  portno;
+  
+  @UI.lineItem: [{ position: 4, label:  'Port of Loading' }]
+  @UI.identification:  [{ position: 4, label:  'Port of Loading' }]
+  @EndUserText.label: 'Port of Loading'
+  portofloading;
+  
+  @UI.lineItem: [{ position: 5, label:  'Port of Clearance' }]
+  @UI.identification:  [{ position: 5, label:  'Port of Clearance' }]
+  @EndUserText.label: 'Port of Clearance'
+  portofclearance;  
+
+}

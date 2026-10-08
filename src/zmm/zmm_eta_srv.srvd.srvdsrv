@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defenation of ETA report'
+define service ZMM_ETA_SRV {
+  expose zmm_eta_PEV1 as ETA_MAIN;
+}

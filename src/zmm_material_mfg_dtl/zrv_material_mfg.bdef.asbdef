@@ -1,0 +1,26 @@
+managed implementation in class zbp_rv_material_mfg unique;
+strict ( 2 );
+
+define behavior for ZRV_MATERIAL_MFG //alias <alias_name>
+persistent table zmaterial_mfg_t
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  mapping for zmaterial_mfg_t
+  {
+    Material = Material;
+    MaterialDesc = material_desc;
+    MfgerName = Mfger_Name;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

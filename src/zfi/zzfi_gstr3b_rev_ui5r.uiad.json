@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "GSTR3B Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GSTR3B Report"
+  },
+  "ui5AppDetails": {
+    "appId": "figstr3b"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_75D07F7C6319A14D6B32BCB6FCC3E1D2D4D7FB9F_TM",
+    "semanticObject": "gstr3b",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_75D07F7C6319A14D6B32BCB6FCC3E1D2D4D7FB9F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GSTR3B Report"
+      }
+    }
+  ]
+}

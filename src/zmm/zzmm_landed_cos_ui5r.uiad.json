@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Landed Cost Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Landed Cost Report"
+  },
+  "ui5AppDetails": {
+    "appId": "landedcostreport.landedcostreport"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7CA78F5632C5EB68DAA4E7E4D56D0510928D13E7_TM",
+    "semanticObject": "ZZMM_LANDED_COST_REV",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7CA78F5632C5EB68DAA4E7E4D56D0510928D13E7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Landed Cost Report"
+      }
+    }
+  ]
+}

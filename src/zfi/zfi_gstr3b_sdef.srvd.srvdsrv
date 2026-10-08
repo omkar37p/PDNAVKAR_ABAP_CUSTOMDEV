@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Defination for GSTR3B Report'
+define service ZFI_GSTR3B_SDEF {
+  expose ZFI_GSTR3B_PV  as MainItem;
+  expose ZFI_GSTR3B_GRP;
+}

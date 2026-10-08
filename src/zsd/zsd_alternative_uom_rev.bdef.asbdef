@@ -1,0 +1,29 @@
+managed implementation in class zbp_sd_alternative_uom_rev unique;
+strict ( 2 );
+with draft;
+define behavior for ZSD_ALTERNATIVE_UOM_REV alias HDR
+persistent table zsd_alternav_uom
+draft table zsd_alterna_uom2
+lock master total etag product
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+mapping for zsd_alternav_uom control zsd_alternative_uom_st
+{
+    product = product;
+    alternativeunit = alternativeunit;
+    unitofmeasurename = unitofmeasurename;
+    baseunit = baseunit;
+    quantitynumerator = quantitynumerator;
+    quantitydenominator = quantitydenominator;
+}
+}

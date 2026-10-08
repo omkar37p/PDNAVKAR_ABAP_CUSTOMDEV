@@ -1,0 +1,68 @@
+@Metadata.layer: #PARTNER
+@UI: {
+  headerInfo: { typeName: 'Supplier certification list',
+                typeNamePlural: 'Supplier certification list',
+                title: { type: #STANDARD, label: 'Supplier certification list', value: 'PARTNER' } },
+  presentationVariant: [{ sortOrder: [{ by: 'PARTNER', direction:  #DESC }] }] }
+annotate entity Z_MM_SUPPLIER_REPORET_PRV
+    with 
+{
+  @UI: {  lineItem:  [ { position: 09, label: 'PARTNER(SUPPLIER NUMBER)' } ],
+   identification:   [ { position: 09, label: 'PARTNER(SUPPLIER NUMBER)' } ],
+        selectionField:   [ { position: 09}  ]}
+  PARTNER;
+  
+  @UI: {  lineItem:       [ { position: 10, label: 'Supplier Name' } ],
+        identification:   [ { position: 10, label: 'Supplier Name' } ]}
+        //selectionField:   [ { position: 10}  ]}
+        @EndUserText.label: 'SUPPIER'
+  Name;
+  
+//  @UI: {  lineItem:       [ { position: 20, label: 'SOURCE_ID' } ],
+//        identification:   [ { position: 20, label: 'SOURCE_ID' } ],
+//        selectionField:   [ { position: 20}  ]}
+//  SOURCE_ID;
+  
+   @UI: {  lineItem:       [ { position: 30, label: 'Certificate type' } ],
+        identification:   [ { position: 30, label: 'Certificate type' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  TYPE;
+    
+   @UI: {  lineItem: [ { position: 40, label: 'ID NUMBER' } ],
+   identification:   [ { position: 40, label: 'ID NUMBER' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  IDNUMBER;
+  
+  
+  
+ @UI: {  lineItem:   [ { position: 60, label: 'INSTITUTE' } ],
+   identification:   [ { position: 60, label: 'INSTITUTE' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  INSTITUTE; 
+  
+   @UI: {  lineItem: [ { position: 70, label: 'ENTRY_DATE' } ],
+   identification:   [ { position: 70, label: 'ENTRY_DATE' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  ENTRY_DATE;
+  
+  @UI: {  lineItem:  [ { position: 80, label: 'VALID_DATE_FROM' } ],
+   identification:   [ { position: 80, label: 'VALID_DATE_FROM' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  VALID_DATE_FROM;
+  
+  @UI: {  lineItem:  [ { position: 90, label: 'VALID_DATE_TO' } ],
+   identification:   [ { position: 90, label: 'VALID_DATE_TO' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  VALID_DATE_TO;
+  
+  @UI: {  lineItem:  [ { position: 100, label: 'Country' } ],
+   identification:   [ { position: 100, label: 'Country' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  Country;
+  
+  @UI: {  lineItem:  [ { position: 110, label: 'Region' } ],
+   identification:   [ { position: 110, label: 'Region' } ]}
+        //selectionField:   [ { position: 10}  ]}
+  Region;
+  
+}

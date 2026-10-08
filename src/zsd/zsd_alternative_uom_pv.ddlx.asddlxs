@@ -1,0 +1,37 @@
+@Metadata.layer: #PARTNER
+annotate view ZSD_ALTERNATIVE_UOM_PV with 
+{
+  @UI.facet: [{ id: 'ID01', type: #COLLECTION, label: 'Alternative UOM', position: 10 },
+              { id: 'Idc01', type: #IDENTIFICATION_REFERENCE, parentId: 'ID01' } ]
+
+  @UI.lineItem: [{ position: 1, label: 'Product' }]
+  @UI.identification:  [{ position: 1, label: 'Product' }]
+  @EndUserText.label: 'Product'
+  product;
+  
+  @UI.lineItem: [{ position: 2, label: 'Alternative Unit' }]
+  @UI.identification:  [{ position: 2, label: 'Alternative Unit' }]
+  @EndUserText.label: 'Alternative Unit'
+  alternativeunit;
+  
+  @UI.lineItem: [{ position: 3, label: 'Unit of Measure' }]
+  @UI.identification:  [{ position: 3, label: 'Unit of Measure' }]
+  @EndUserText.label: 'Unit of Measure'
+  unitofmeasurename;
+  
+  @UI.lineItem: [{ position: 4, label: 'Base Unit' }]
+  @UI.identification:  [{ position: 4, label: 'Base Unit' }]
+  @EndUserText.label: 'Base Unit'
+  baseunit;
+  
+  @UI.lineItem: [{ position: 5, label: 'Quantity Numerator' }]
+  @UI.identification:  [{ position: 5, label: 'Quantity Numetator' }]
+  @EndUserText.label: 'Quantity Numerator'
+  quantitynumerator;
+  
+  @UI.lineItem: [{ position: 6, label: 'Quantity Denominator' }]
+  @UI.identification:  [{ position: 6, label: 'Quantity Denominator' }]
+  @EndUserText.label: 'Quantity Denominator'
+  quantitydenominator;
+    
+}

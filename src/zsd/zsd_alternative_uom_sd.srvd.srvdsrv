@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defenation Alternative UOM'
+define service ZSD_ALTERNATIVE_UOM_SD {
+  expose ZSD_ALTERNATIVE_UOM_PV;
+}

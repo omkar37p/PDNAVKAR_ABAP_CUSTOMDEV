@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Defination _ v4 - GSTR1 Dispatch Report'
+define service ZSD_GSTR1_DT_SD {
+  expose ZSD_GSTR1_DT_PV as gstr1_dispatch;
+  expose zsd_delivery_v;
+  expose zsd_billg_doc_v;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSD_Reconcilation_Report'
+define service ZSD_Reconcilation_SVCDEF {
+  expose ZPP_RECONCILATION_PV as Reconcilation;
+}

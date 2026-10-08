@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination for Landed Cost'
+define service ZZMM_LANDED_COST_SDEF {
+  expose ZZMM_LANDED_COST_PV;
+}

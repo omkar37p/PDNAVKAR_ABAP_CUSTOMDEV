@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Material Stock",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Material Stock"
+  },
+  "ui5AppDetails": {
+    "appId": "materialstock.zmstock"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_717241FCC7376F88EDDE5E62532EBC383C2B21BB_TM",
+    "semanticObject": "zmstock_final",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_717241FCC7376F88EDDE5E62532EBC383C2B21BB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Stock",
+        "subtitle": "Report"
+      }
+    }
+  ]
+}

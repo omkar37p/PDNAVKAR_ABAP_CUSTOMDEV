@@ -1,0 +1,4 @@
+@EndUserText.label: 'BATCH DETAILS SERVICE DEFINITION'
+define service ZBATCH_DET_SVCDEF {
+  expose ZBATCH_DET_CDS as BatchDetails;
+}

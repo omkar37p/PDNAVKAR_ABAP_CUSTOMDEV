@@ -1,0 +1,214 @@
+@Metadata.layer: #PARTNER
+
+@UI: {
+  headerInfo: { typeName: 'GSTR3B Report',
+                typeNamePlural: 'GSTR3B Report',
+                title: { type: #STANDARD, label: 'Finance - GSTR3B', value: 'documentnumber' } },
+  presentationVariant: [{ sortOrder: [{ by: 'documentnumber', direction:  #DESC }] }] }
+annotate view ZFI_GSTR3B_PV with
+{
+  @UI.facet: [ {       id:              'ZGSTR3B',
+                       purpose:         #STANDARD,
+                       type:            #IDENTIFICATION_REFERENCE,
+                       label:           'GSTR3B',
+                       position:        8 } ]
+
+  @UI.lineItem          : [{ position: 10, label: 'Buyer GSTIN' }]
+  @UI.identification    : [{ position: 10, label: 'Buyer GSTIN'  }]
+ // @EndUserText          : { label:  'Buyer GSTIN' } // filter fields display name
+ buyergstin   ;
+  @UI.lineItem          : [{ position: 20, label: 'Supplier GSTIN' }]
+   @UI.identification    : [{ position: 20, label: 'Supplier GSTIN'  }]
+  @EndUserText          : { label:  'Supplier GSTIN' }
+ suppliergstin ;
+  @UI.lineItem          : [{ position: 30, label: 'Supplier Name'  }]
+  @UI.identification    : [{ position: 30, label: 'Supplier Name'   }]
+//  @EndUserText          : { label: 'Supplier Name'  }
+  suppliername  ;
+  @UI.lineItem          : [{ position: 40, label: 'Invoice Status'  }]
+  @UI.identification    : [{ position: 40, label: 'Invoice Status'   }]
+//  @EndUserText          : { label: 'Invoice Status'  }
+  invoicestatus    ;
+  @UI.lineItem          : [{ position: 50, label: 'SupplyType'  }]
+  @UI.identification    : [{ position: 50, label: 'SupplyType'   }]
+//  @EndUserText          : { label: 'Master Batch No'  }
+  supplytype      ;
+  @UI.lineItem          : [{ position: 60, label: 'Invoice No'  }]
+  @UI.identification    : [{ position: 60, label: 'Invoice No'  }]
+//  @EndUserText          : { label: 'Invoice No'  }
+  invoiceno         ;
+  @UI.lineItem          : [{ position: 70, label: 'Invoice Date'  }] // Item
+ // @UI.selectionField    : [{position: 10   }]  //Header Parameter position
+ // @EndUserText          : { label:  'Invoice Date', quickInfo: 'Invoice Date' } //Header Parameter test
+  @UI.identification    : [{ position: 70, label: 'Invoice Date'  }] // Inside Line Item Position
+ // @Search               : { defaultSearchElement: true, fuzzinessThreshold: 0.8 }
+  invoicedate       ;
+  @UI.lineItem          : [{ position: 80, label: 'Invoice Type '  }]
+ // @EndUserText          : { label:  'Invoice Type ', quickInfo: 'Invoice Type ' }
+  @UI.identification    : [{ position: 80, label: 'Invoice Type '  }]
+  invoicetype        ;
+  @UI.lineItem          : [{ position: 90, label: 'Note Number'  }]
+  // @EndUserText          : { label:  'Note Number', quickInfo: 'Note Number' }
+  @UI.identification    : [{ position: 90, label: 'Note Number'   }]
+  notenumber         ;
+  @UI.lineItem          : [{ position: 100, label: 'Note Date'  }]
+ // @EndUserText          : { label:  'Base Unit', quickInfo: 'Note Date' }
+  @UI.identification    : [{ position: 100, label: 'Note Date'  }]
+  notedate          ;
+  @UI.lineItem          : [{ position: 110, label: 'HSN/SAC '  }]
+ // @EndUserText          : { label:  'HSN/SAC ', quickInfo: 'HSN/SAC ' }
+  @UI.identification    : [{ position: 110, label: 'HSN/SAC '  }]
+  hsn_sac            ;
+  @UI.lineItem          : [{ position: 120, label: 'Item Description'  }]
+ // @EndUserText          : { label:  'Item Description', quickInfo: 'Item Description' }
+  @UI.identification    : [{ position: 120, label: 'Item Description'   }]
+  itemdescription   ;
+  @UI.lineItem          : [{ position: 130, label: 'Quantity '  }]
+//  @EndUserText          : { label:  'Quantity  ', quickInfo: 'Quantity  ' }
+  @UI.identification    : [{ position: 130, label: 'Quantity  '  }]
+  quantity           ;
+  @UI.lineItem          : [{ position: 140, label: 'UQC (Unit of Measure) '  }]
+// @EndUserText          : { label:  'UQC (Unit of Measure) ', quickInfo: 'UQC (Unit of Measure)' }
+  @UI.identification    : [{ position: 140, label: 'UQC (Unit of Measure) '   }]
+  uqc                ;
+  @UI.lineItem          : [{ position: 150, label: 'Invoice Value '  }]
+ // @EndUserText          : { label:  'Invoice Value ', quickInfo: 'Invoice Value ' }
+  @UI.identification    : [{ position: 150, label: 'Invoice Value '  }]
+  invoicevalue       ;
+  @UI.lineItem          : [{ position: 160, label: 'Note Value'  }]
+// @EndUserText          : { label:  'Note Value', quickInfo: 'Note Value' }
+  @UI.identification    : [{ position: 160, label: 'Note Value'   }]
+  notevalue           ;
+  @UI.lineItem          : [{ position: 170, label: 'Taxable Value '  }]
+//  @EndUserText          : { label:  'Taxable Value ', quickInfo: 'Taxable Value ' }
+  @UI.identification    : [{ position: 170, label: 'Taxable Value '  }]
+  taxablevalue        ;
+  @UI.lineItem          : [{ position: 180, label: 'GST Rate'  }]
+//  @EndUserText          : { label:  'GST Rate', quickInfo: 'GST Rate' }
+  @UI.identification    : [{ position: 180, label: 'GST Rate'   }]
+  GSTRATE             ;
+  @UI.lineItem          : [{ position: 190, label: 'IGST Amount '  }]
+//  @EndUserText          : { label:  'IGST Amount ', quickInfo: 'IGST Amount' }
+  @UI.identification    : [{ position: 190, label: 'IGST Amount '   }]
+  igstamount          ;
+  @UI.lineItem          : [{ position: 200, label: 'CGST Amount  '  }]
+//  @EndUserText          : { label:  'CGST Amount  ', quickInfo: 'CGST Amount ' }
+  @UI.identification    : [{ position: 200, label: 'CGST Amount  '  }]
+  cgstamount          ;
+  @UI.lineItem          : [{ position: 210, label: 'SGST/UTGST Amount'  }]
+//  @EndUserText          : { label:  'SGST/UTGST Amount', quickInfo: 'SGST/UTGST Amount' }
+  @UI.identification    : [{ position: 210, label: 'SGST/UTGST Amount'   }]
+  sgstamount    ;
+  @UI.lineItem          : [{ position: 220, label: 'CESS Amount '  }]
+//  @EndUserText          : { label:  'CESS Amount ', quickInfo: 'CESS Amount ' }
+  @UI.identification    : [{ position: 220, label: 'CESS Amount '  }]
+  cessamount          ;
+//  @UI.lineItem          : [{ position: 230, label: 'Revenue Account'  }]
+//  @EndUserText          : { label:  'Revenue Account', quickInfo: 'Revenue Account' }
+//  @UI.identification    : [{ position: 230, label: 'Revenue Account'   }]
+//  revenueaccount       ;
+//  @UI.lineItem          : [{ position: 240, label: 'Place of Supply '  }]
+//  @EndUserText          : { label:  'Place of Supply ', quickInfo: 'Place of Supply ' }
+//  @UI.identification    : [{ position: 240, label: 'Place of Supply '   }]
+//  placeofsupply        ;
+//  @UI.lineItem          : [{ position: 250, label: 'Location'  }]
+//  @EndUserText          : { label:  'Location', quickInfo: 'Location' }
+//  @UI.identification    : [{ position: 250, label: 'Location'   }]
+//  location             ;
+  @UI.lineItem          : [{ position: 260, label: 'Itc Eligibility'  }]
+//  @EndUserText          : { label:  'Itc Eligibility', quickInfo: 'Itc Eligibility' }
+  @UI.identification    : [{ position: 260, label: 'Itc Eligibility'   }]
+  itceligibility       ;
+  @UI.lineItem          : [{ position: 270, label: 'Eligibility Category'  }]
+//  @EndUserText          : { label:  'Eligibility Category', quickInfo: 'Eligibility Category ' }
+  @UI.identification    : [{ position: 270, label: 'Eligibility Category '   }]
+  eligibilitycategory  ;
+  @UI.lineItem          : [{ position: 280, label: 'Reverse Charge'  }]
+//  @EndUserText          : { label:  'Reverse Charge', quickInfo: 'Reverse Charge' }
+  @UI.identification    : [{ position: 280, label: 'Reverse Charge'   }]
+  reversecharge        ;
+  @UI.lineItem          : [{ position: 290, label: 'Import Type '  }]
+//  @EndUserText          : { label:  'Import Type ', quickInfo: 'Import Type ' }
+  @UI.identification    : [{ position: 290, label: 'Import Type '   }]
+  importtype           ;
+//  @UI.lineItem          : [{ position: 300, label: 'Bill of entry number'  }]
+//  @EndUserText          : { label:  'Bill of entry number', quickInfo: 'Bill of entry number' }
+//  @UI.identification    : [{ position: 300, label: 'Bill of entry number'   }]
+//  billofentrynumber    ;
+//  @UI.lineItem          : [{ position: 310, label: 'Bill of entry date'  }]
+//  @EndUserText          : { label:  'Bill of entry date', quickInfo: 'Bill of entry date' }
+//  @UI.identification    : [{ position: 310, label: 'Bill of entry date'   }]
+//  billofentrydate      ;
+  @UI.lineItem          : [{ position: 320, label: 'GSTR2 Return Period'  }]
+//  @EndUserText          : { label:  'gstr2 return period', quickInfo: 'gstr2 return period' }
+  @UI.identification    : [{ position: 320, label: 'GSTR2 Return Period'   }]
+  @UI.selectionField:     [{ position: 20 }]
+  gstr2returnperiod    ;
+  @UI.lineItem          : [{ position: 330, label: '3B Auto-Fill Period'  }]
+//  @EndUserText          : { label:  '3B Auto-Fill Period', quickInfo: '3B Auto-Fill Period' }
+  @UI.identification    : [{ position: 330, label: '3B Auto-Fill Period'   }]
+  b3auto_fillperiod    ;
+//  @UI.lineItem          : [{ position: 340, label: 'Transaction Number'  }]
+//  @EndUserText          : { label:  'Transaction Number', quickInfo: 'Transaction Number' }
+//  @UI.identification    : [{ position: 340, label: 'Transaction Number'   }]
+//  transactionnumber    ;
+//  @UI.lineItem          : [{ position: 350, label: 'Port Code'  }]
+//  @EndUserText          : { label:  'Port Code', quickInfo: 'Port Code' }
+//  @UI.identification    : [{ position: 350, label: 'Port Code'   }]
+//  portcode             ;
+//  @UI.lineItem          : [{ position: 360, label: 'Isamended '  }]
+//  @EndUserText          : { label:  'Isamended ', quickInfo: 'Isamended ' }
+//  @UI.identification    : [{ position: 360, label: 'Isamended '   }]
+//  isamended            ;
+//  @UI.lineItem          : [{ position: 370, label: 'Original Invoice Number'  }]
+//  @EndUserText          : { label:  'Original Invoice Number', quickInfo: 'Original Invoice Number' }
+//  @UI.identification    : [{ position: 370, label: 'Original Invoice Number'   }]
+//  originalinvoicenumber ;
+//  @UI.lineItem          : [{ position: 380, label: 'Original Invoice Date'  }]
+//  @EndUserText          : { label:  'Original Invoice Date', quickInfo: 'Original Invoice Date' }
+//  @UI.identification    : [{ position: 380, label: 'Original Invoice Date'   }]
+//  originalinvoicedate   ;
+//  @UI.lineItem          : [{ position: 390, label: 'Amortised Cost'  }]
+ // @EndUserText          : { label:  'Amortised Cost', quickInfo: 'Amortised Cost' }
+ // @UI.identification    : [{ position: 390, label: 'Amortised Cost'   }]
+//  amortisedcost         ;
+  @UI.lineItem          : [{ position: 400, label: 'Document Number'  }]
+  @EndUserText          : { label:  'Document Number', quickInfo: 'Document Number' }
+  @UI.identification    : [{ position: 400, label: 'Document Number'   }]
+  @UI.selectionField:     [{ position: 10 }]
+  documentnumber        ;
+  @UI.lineItem          : [{ position: 410, label: 'Fiscal Year '  }]
+ // @EndUserText          : { label:  'Fiscal Year', quickInfo: 'Fiscal Year' }
+  @UI.identification    : [{ position: 410, label: 'Fiscal Year '   }]
+  FiscalYear        ;
+//  @UI.lineItem          : [{ position: 420, label: 'Document Item '  }]
+// // @EndUserText          : { label:  'Document Item', quickInfo: 'Document Item' }
+//  @UI.identification    : [{ position: 420, label: 'Document Item '   }]
+//  DocumentItem        ;
+  @UI.lineItem          : [{ position: 420, label: 'Document Date '  }]
+  @EndUserText          : { label:  'Document Date ', quickInfo: 'Document Date ' }
+  @UI.identification    : [{ position: 420, label: 'Document Date '   }]
+  @UI.selectionField    : [{ position: 30 }]
+  documentdate          ;
+ @UI.lineItem          : [{ position: 430, label: 'taxablevalue_1'  }]
+  @EndUserText          : { label:  'taxablevalue_1', quickInfo: 'taxablevalue_1' }
+  @UI.identification    : [{ position: 430, label: 'taxablevalue_1'   }]
+ taxablevalue_1        ;
+  @UI.lineItem          : [{ position: 440, label: 'cgstamount_1'  }]
+  @EndUserText          : { label:  'cgstamount_1', quickInfo: 'cgstamount_1' }
+  @UI.identification    : [{ position: 440, label: 'cgstamount_1'   }]
+  cgstamount_1            ;
+   @UI.lineItem          : [{ position: 450, label: 'sgstamount_1'  }]
+  @EndUserText          : { label:  'sgstamount_1', quickInfo: 'sgstamount_1' }
+  @UI.identification    : [{ position: 450, label: 'sgstamount_1'   }]
+  sgstamount_1            ;
+     @UI.lineItem          : [{ position: 460, label: 'Igtamount_1'  }]
+  @EndUserText          : { label:  'Igstamount_1', quickInfo: 'Igstamount_1' }
+  @UI.identification    : [{ position: 460, label: 'Igstamount_1'   }]
+  igstamount_1           ;
+   @UI.lineItem          : [{ position: 460, label: 'Company Code Currency'}]
+  @EndUserText          : { label:  'Company Code Currency', quickInfo: 'Company Code Currency' }
+  @UI.identification    : [{ position: 460, label: 'Company Code Currency'   }]
+  CCURR           ;
+  
+}

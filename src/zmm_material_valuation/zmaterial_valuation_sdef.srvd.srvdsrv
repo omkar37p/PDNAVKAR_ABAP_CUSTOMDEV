@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination of Material Valuation'
+define service ZMATERIAL_VALUATION_SDEF {
+  expose ZMATERIAL_VALUATION_PV;
+}

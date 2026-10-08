@@ -1,0 +1,4 @@
+@EndUserText.label: 'Supplier Aging Service Definition'
+define service ZFI_SUPPLIER_AGING_SDEF {
+  expose ZFI_SUPPLIER_AGING_PV;
+}

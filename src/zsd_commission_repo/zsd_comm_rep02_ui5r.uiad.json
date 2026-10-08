@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Commission Report - Sales",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Commission Report - Sales"
+  },
+  "ui5AppDetails": {
+    "appId": "zsdcommrep02"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_941C3CC22E82403F1FF1F34DBADC7F314405FF93_TM",
+    "semanticObject": "YY1_COMM_REP02",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_941C3CC22E82403F1FF1F34DBADC7F314405FF93_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Commission Report - Sales"
+      }
+    }
+  ]
+}

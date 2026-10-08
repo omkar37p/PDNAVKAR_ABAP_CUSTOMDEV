@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Sales Order List",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales Order List"
+  },
+  "ui5AppDetails": {
+    "appId": "zsdorderrep02"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_296B0FF39195A2051E012EA3D6FF7C0FAB0A9E37_TM",
+    "semanticObject": "YY1_SALESORDREP_02",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_296B0FF39195A2051E012EA3D6FF7C0FAB0A9E37_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Order List"
+      }
+    }
+  ]
+}

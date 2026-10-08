@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Dispatch Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Dispatch Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zsddispatchrep01"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A61532F797296BB76456DCDA85A3633DFED5AB8F_TM",
+    "semanticObject": "YY1_SDDISPATCH_REP_01",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A61532F797296BB76456DCDA85A3633DFED5AB8F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Dispatch Report"
+      }
+    }
+  ]
+}

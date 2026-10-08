@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination of Consumsion view'
+define service ZSDef_Material_MFG {
+  expose ZCV_MATERIAL_MFG;
+}

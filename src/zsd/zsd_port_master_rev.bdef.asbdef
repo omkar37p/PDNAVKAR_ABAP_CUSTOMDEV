@@ -1,0 +1,28 @@
+managed implementation in class zbp_sd_port_master_rev unique;
+strict ( 2 );
+with draft;
+define behavior for ZSD_PORT_MASTER_REV alias HDR
+persistent table zsd_port_master
+draft table zsd_port_master2
+lock master total etag portname //Taxcode
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly : update ) portname, countryname, portno ;
+  create;
+  update;
+  delete;
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+mapping for zsd_port_master control zsd_port_master_cx
+    {
+      portname = portname ;
+      countryname = countryname ;
+      portno = portno ;
+      portofloading = portofloading ;
+      portofclearance = portofclearance ;
+    }
+}

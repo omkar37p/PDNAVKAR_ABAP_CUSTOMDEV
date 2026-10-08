@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination for Port Master'
+define service ZSD_PORT_MASTER_SDEF {
+  expose ZSD_PORT_MASTER_PV;
+}
